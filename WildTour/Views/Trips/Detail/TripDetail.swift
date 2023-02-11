@@ -66,7 +66,6 @@ struct LandmarkDetail_Previews: PreviewProvider {
     static let modelData = ModelData()
     
     static var previews: some View {
-        TripDetail(trip: modelData.trips[0])
-            .environmentObject(modelData)
+        TripDetail(trip: modelData.trips[0])            .environmentObject(modelData)
     }
 }
