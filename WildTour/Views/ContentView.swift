@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TripList()
+        if LoginService.isLoggined() {
+            TripList()
+        } else {
+            LoginView()
+        }
+        
     }
 }
 

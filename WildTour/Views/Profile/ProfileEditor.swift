@@ -9,20 +9,38 @@ import SwiftUI
 
 struct ProfileEditor: View {
     
+    @Environment(\.editMode) private var editMode
+    
     @Binding var profile: Profile
-        
+    
     var body: some View {
-        List {
-            HStack {
-                Text("Username").bold()
-                Divider()
-                TextField("Username", text: $profile.username)
+        NavigationView {
+            List {
+                
+                HStack {
+                    Text("Username").bold()
+                    Divider()
+                    TextField("Username", text: .constant(profile.username ?? "text"))
+                }
+                
+                Toggle(isOn: $profile.prefersNotifications) {
+                    Text("Enable Notifications").bold()
+                }
+                
+                Button(action: {
+                    LoginService.logout()
+                    editMode?.wrappedValue = .inactive  //Go to login page
+                }) {
+                    Text("Logout")
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.red)
+                        .cornerRadius(8)
+                    
+                }
+                .padding()
             }
-            
-            Toggle(isOn: $profile.prefersNotifications) {
-                Text("Enable Notifications").bold()
-            }
-            
         }
     }
     

@@ -17,10 +17,10 @@
 		99368D93299803930005A169 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D92299803930005A169 /* Duration.swift */; };
 		99368D9529980D300005A169 /* TripStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D9429980D300005A169 /* TripStep.swift */; };
 		99368D9729980EE40005A169 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D9629980EE40005A169 /* Step.swift */; };
+		99368D9A29A421BB0005A169 /* Panda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D9929A421BB0005A169 /* Panda.swift */; };
 		993AB2672953BD9800885001 /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AB2662953BD9800885001 /* TripList.swift */; };
 		993AB2692953BE1300885001 /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AB2682953BE1300885001 /* TripDetail.swift */; };
 		993AB26B2953C3DC00885001 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AB26A2953C3DC00885001 /* FavoriteButton.swift */; };
-		993AB26F2953C5A400885001 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AB26E2953C5A400885001 /* HexagonParameters.swift */; };
 		9988B7B52958E7C00003E39B /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988B7B42958E7C00003E39B /* ProfileEditor.swift */; };
 		9988B7B72958F5FC0003E39B /* profileData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9988B7B62958F5FC0003E39B /* profileData.json */; };
 		999940E7295365B5001B5028 /* WildTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999940E6295365B5001B5028 /* WildTourApp.swift */; };
@@ -33,6 +33,9 @@
 		9999411529538AB6001B5028 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999411429538AB6001B5028 /* MapView.swift */; };
 		9999411B2953B8B0001B5028 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999411A2953B8B0001B5028 /* ModelData.swift */; };
 		999941242953BA35001B5028 /* TripRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999941232953BA35001B5028 /* TripRow.swift */; };
+		99AFA37529B3B0B200C8D5B5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AFA37429B3B0B200C8D5B5 /* LoginView.swift */; };
+		99CC919A29B3C99800392F35 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CC919929B3C99800392F35 /* KeychainService.swift */; };
+		99CC919C29B3E16D00392F35 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CC919B29B3E16D00392F35 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +66,10 @@
 		99368D92299803930005A169 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		99368D9429980D300005A169 /* TripStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStep.swift; sourceTree = "<group>"; };
 		99368D9629980EE40005A169 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		99368D9929A421BB0005A169 /* Panda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panda.swift; sourceTree = "<group>"; };
 		993AB2662953BD9800885001 /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
 		993AB2682953BE1300885001 /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		993AB26A2953C3DC00885001 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
-		993AB26E2953C5A400885001 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 		9988B7B42958E7C00003E39B /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		9988B7B62958F5FC0003E39B /* profileData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profileData.json; sourceTree = "<group>"; };
 		999940E3295365B5001B5028 /* WildTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +85,9 @@
 		9999411429538AB6001B5028 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		9999411A2953B8B0001B5028 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		999941232953BA35001B5028 /* TripRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRow.swift; sourceTree = "<group>"; };
+		99AFA37429B3B0B200C8D5B5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		99CC919929B3C99800392F35 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		99CC919B29B3E16D00392F35 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 		999940E5295365B5001B5028 /* WildTour */ = {
 			isa = PBXGroup;
 			children = (
+				99CC919829B3C98200392F35 /* Services */,
 				999941202953B9DA001B5028 /* Views */,
 				9999411F2953B9BE001B5028 /* Resources */,
 				9999411C2953B913001B5028 /* Model */,
@@ -215,6 +222,7 @@
 				99368D8D299802E70005A169 /* WT */,
 				9999411A2953B8B0001B5028 /* ModelData.swift */,
 				99362A142958C0E800792041 /* Profile.swift */,
+				99368D9929A421BB0005A169 /* Panda.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,13 +239,30 @@
 		999941202953B9DA001B5028 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				99AFA37329B3B0A100C8D5B5 /* Login */,
 				99362A182958C11200792041 /* Profile */,
 				993AB26D2953C42800885001 /* Trips */,
 				993AB26C2953C40E00885001 /* Helpers */,
 				999940E8295365B5001B5028 /* ContentView.swift */,
-				993AB26E2953C5A400885001 /* HexagonParameters.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		99AFA37329B3B0A100C8D5B5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				99AFA37429B3B0B200C8D5B5 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		99CC919829B3C98200392F35 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				99CC919929B3C99800392F35 /* KeychainService.swift */,
+				99CC919B29B3E16D00392F35 /* LoginService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,11 +403,13 @@
 				999940E7295365B5001B5028 /* WildTourApp.swift in Sources */,
 				99368D9529980D300005A169 /* TripStep.swift in Sources */,
 				99362A172958C10700792041 /* ProfileHost.swift in Sources */,
+				99CC919C29B3E16D00392F35 /* LoginService.swift in Sources */,
 				993AB26B2953C3DC00885001 /* FavoriteButton.swift in Sources */,
-				993AB26F2953C5A400885001 /* HexagonParameters.swift in Sources */,
+				99AFA37529B3B0B200C8D5B5 /* LoginView.swift in Sources */,
 				993AB2672953BD9800885001 /* TripList.swift in Sources */,
 				993AB2692953BE1300885001 /* TripDetail.swift in Sources */,
 				99368D9729980EE40005A169 /* Step.swift in Sources */,
+				99CC919A29B3C99800392F35 /* KeychainService.swift in Sources */,
 				99368D91299803830005A169 /* Distance.swift in Sources */,
 				9999411329538971001B5028 /* CircleImage.swift in Sources */,
 				9999411B2953B8B0001B5028 /* ModelData.swift in Sources */,
@@ -391,6 +418,7 @@
 				99368D8F299802FC0005A169 /* Point.swift in Sources */,
 				9988B7B52958E7C00003E39B /* ProfileEditor.swift in Sources */,
 				99362A152958C0E800792041 /* Profile.swift in Sources */,
+				99368D9A29A421BB0005A169 /* Panda.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

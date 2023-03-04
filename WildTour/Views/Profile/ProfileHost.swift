@@ -13,7 +13,6 @@ struct ProfileHost: View {
     
     @EnvironmentObject var modelData: ModelData
     
-
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
@@ -22,14 +21,13 @@ struct ProfileHost: View {
                         editMode?.animation().wrappedValue = .inactive
                     }
                 }
+                
                 Spacer()
                 EditButton()
-                
             }
             
-            
             if editMode?.wrappedValue == .inactive {
-                ProfileSummary(profile: modelData.profile)
+                ProfileSummary(profile: modelData.profile, imageMetadata: modelData.currentPanda)
             } else {
                 ProfileEditor(profile: $modelData.profile)
             }
