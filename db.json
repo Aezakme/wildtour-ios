@@ -1,159 +1,83 @@
-[{
-    "id" : 0,
-    "name": "trip_name_1",
-    "description": "trip_description",
-    "rating": 5,
-    "visibility": "FRIENDS",
-    "createdAt": "2022-02-02",
-    "updatedAt": "2022-02-03",
-    "isFavorite" : true,
-    "imageName": "silversalmoncreek",
-    "route": {
-        "startPointId": 1,
-        "endPointId": 3,
-        "steps": [
-            {
-                "startPoint": {
-                    "id": 1,
-                    "name": "firstPlace",
-                    "formattedAddress": "firstPlaceAddress",
-                    "url": "url",
-                    "lat": 1.0,
-                    "lng": 1.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "endPoint": {
-                    "id": 2,
-                    "name": "secondPlace",
-                    "formattedAddress": "secondPlaceAddress",
-                    "url": "url",
-                    "lat": 2.0,
-                    "lng": 2.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "distance": {
-                    "inMeters": 200,
-                    "humanReadable": "0.2 km"
-                },
-                "duration": {
-                    "inSeconds": 60,
-                    "humanReadable": "1 min"
-                },
-                "travelMode": "DRIVING"
-            },
-            {
-                "startPoint": {
-                    "id": 2,
-                    "name": "secondPlace",
-                    "formattedAddress": "secondPlaceAddress",
-                    "url": "url",
-                    "lat": 2.0,
-                    "lng": 2.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "endPoint": {
-                    "id": 3,
-                    "name": "thirdPlace",
-                    "formattedAddress": "thirdPlaceAddress",
-                    "url": "url",
-                    "lat": 3.0,
-                    "lng": 3.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "distance": {
-                    "inMeters": 500,
-                    "humanReadable": "0.5 km"
-                },
-                "duration": {
-                    "inSeconds": 120,
-                    "humanReadable": "2 min"
-                },
-                "travelMode": "DRIVING"
-            }
-        ]
-    }
-},
 {
-    "id" : 1,
-    "name": "trip_name_2",
-    "description": "trip_description",
-    "rating": 4.5,
-    "visibility": "FRIENDS",
-    "createdAt": "2022-02-02",
-    "updatedAt": "2022-02-03",
-    "isFavorite" : false,
-    "imageName": "stmarylake",
-    "route": {
-        "startPointId": 4,
-        "endPointId": 6,
-        "steps": [
-            {
-                "startPoint": {
-                    "id": 4,
-                    "name": "firstPlace",
-                    "formattedAddress": "firstPlaceAddress",
-                    "url": "url",
-                    "lat": 1.0,
-                    "lng": 1.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "endPoint": {
-                    "id": 5,
-                    "name": "secondPlace",
-                    "formattedAddress": "secondPlaceAddress",
-                    "url": "url",
-                    "lat": 2.0,
-                    "lng": 2.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "distance": {
-                    "inMeters": 200,
-                    "humanReadable": "0.2 km"
-                },
-                "duration": {
-                    "inSeconds": 60,
-                    "humanReadable": "1 min"
-                },
-                "travelMode": "DRIVING"
-            },
-            {
-                "startPoint": {
-                    "id": 5,
-                    "name": "secondPlace",
-                    "formattedAddress": "secondPlaceAddress",
-                    "url": "url",
-                    "lat": 2.0,
-                    "lng": 2.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "endPoint": {
-                    "id": 6,
-                    "name": "thirdPlace",
-                    "formattedAddress": "thirdPlaceAddress",
-                    "url": "url",
-                    "lat": 3.0,
-                    "lng": 3.0,
-                    "externalId": "ChIJVXtP4Hw0lkYRoXRz5KEsTlM",
-                    "photos": "123"
-                },
-                "distance": {
-                    "inMeters": 500,
-                    "humanReadable": "0.5 km"
-                },
-                "duration": {
-                    "inSeconds": 120,
-                    "humanReadable": "2 min"
-                },
-                "travelMode": "DRIVING"
-            }
-        ]
-    }
+  "id": 1,
+  "name": "1",
+  "description": "dummy trip for test",
+  "visibility": null,
+  "rating": 5,
+  "route": {
+    "startPointId": 1,
+    "endPointId": 3,
+    "steps": [
+      {
+        "id": 1,
+        "startPoint": {
+          "id": 1,
+          "name": "dummy_point_1",
+          "formattedAddress": "address_first",
+          "url": null,
+          "lat": 1,
+          "lng": 1,
+          "externalId": "external_1",
+          "photos": null
+        },
+        "endPoint": {
+          "id": 2,
+          "name": "dummy_point_2",
+          "formattedAddress": "address_second",
+          "url": null,
+          "lat": 2,
+          "lng": 2,
+          "externalId": "external_2",
+          "photos": null
+        },
+        "distance": 15000,
+        "duration": 30,
+        "travelMode": "TRAIN"
+      },
+      {
+        "id": 2,
+        "startPoint": {
+          "id": 2,
+          "name": "dummy_point_2",
+          "formattedAddress": "address_second",
+          "url": null,
+          "lat": 2,
+          "lng": 2,
+          "externalId": "external_2",
+          "photos": null
+        },
+        "endPoint": {
+          "id": 3,
+          "name": "dummy_point_3",
+          "formattedAddress": "address_third",
+          "url": null,
+          "lat": 1.5,
+          "lng": 1.5,
+          "externalId": "external_2",
+          "photos": null
+        },
+        "distance": 115000,
+        "duration": 270,
+        "travelMode": "CAR"
+      }
+    ]
+  },
+  "createdAt": [
+    2023,
+    3,
+    15,
+    18,
+    19,
+    21,
+    936737000
+  ],
+  "updatedAt": [
+    2023,
+    3,
+    15,
+    18,
+    19,
+    21,
+    936737000
+  ]
 }
-]
