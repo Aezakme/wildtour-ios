@@ -8,14 +8,14 @@ struct Trip: Hashable, Codable, Identifiable {
     var description: String
     var rating: Float
     var visibility: String
-    var createdAt : String
-    var updatedAt : String
     var isFavorite : Bool
+    var createdAt : [Int]
+    var updatedAt : [Int]
     var route : Route
     
-    private var imageName: String
+//    private var imageName: String
     var image: Image {
-        Image(imageName)
+        Image("silversalmoncreek")
     }
 
     struct Route: Hashable, Codable {

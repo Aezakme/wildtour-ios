@@ -9,10 +9,10 @@ import Foundation
 
 
 struct Step: Hashable, Codable, Identifiable {
-    var id: UUID? = UUID()
+    var id: Int? = 0
     var startPoint: Point
     var endPoint: Point
-    var distance : Distance
-    var duration : Duration
+    var distance : Int
+    var duration : Int
     var travelMode: String
 }

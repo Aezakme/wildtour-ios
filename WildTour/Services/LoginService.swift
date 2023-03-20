@@ -28,7 +28,7 @@ class LoginService {
     }
     
     static func logout() {
-        var status = KeychainService.deleteValue(key : "username")
+        let status = KeychainService.deleteValue(key : "username")
         if (status != errSecSuccess) {print("problem with logout \(status)")}
         
         //if (status != errSecSuccess) {print("problem with logout 2 \(status)")} //WTF???

@@ -11,7 +11,7 @@ struct ProfileHost: View {
     
     @Environment(\.editMode) var editMode
     
-    @EnvironmentObject var modelData: ModelData
+    var profile: Profile
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -27,13 +27,12 @@ struct ProfileHost: View {
             }
             
             if editMode?.wrappedValue == .inactive {
-                ProfileSummary(profile: modelData.profile, imageMetadata: modelData.currentPanda)
+                ProfileSummary(profile: profile)
             } else {
-                ProfileEditor(profile: $modelData.profile)
+                ProfileEditor(profile:  profile)
             }
         }
         .padding()
-        
     }
     
 }
@@ -41,8 +40,6 @@ struct ProfileHost: View {
 struct ProfileHost_Previews: PreviewProvider {
     
     static var previews: some View {
-        ProfileHost()
-            .environmentObject(ModelData())
-        
+        ProfileHost(profile: MockData().profile)
     }
 }

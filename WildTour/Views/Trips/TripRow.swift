@@ -23,11 +23,10 @@ struct TripRow: View {
 }
 
 struct LandmarkRow_Previews: PreviewProvider {
-    static var trips = ModelData().trips
+    static var trip = MockData().trips[0]
     static var previews: some View {
         Group {
-            TripRow(trip: trips[0])
-            TripRow(trip: trips[1])
+            TripRow(trip: trip)
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

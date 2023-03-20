@@ -66,7 +66,7 @@ struct LoginView: View {
     
     @ViewBuilder
     func chooseDestination() -> some View {
-         ContentView().environmentObject(ModelData()).navigationBarBackButtonHidden(true)
+         ContentView().environmentObject(MockData()).navigationBarBackButtonHidden(true)
     }
     
 }

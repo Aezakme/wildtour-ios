@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "first",
+    "description": "dummy trip for test",
+    "visibility": "FRIENDS",
+    "isFavorite": true,
+    "rating": 5,
+    "route": {
+      "startPointId": 1,
+      "endPointId": 3,
+      "steps": [
+        {
+          "id": 1,
+          "startPoint": {
+            "id": 1,
+            "name": "dummy_point_1",
+            "formattedAddress": "address_first",
+            "url": "url_1",
+            "lat": 1,
+            "lng": 1,
+            "externalId": "external_1",
+            "photos": "photo_1"
+          },
+          "endPoint": {
+            "id": 2,
+            "name": "dummy_point_2",
+            "formattedAddress": "address_second",
+            "url": "url_2",
+            "lat": 2,
+            "lng": 2,
+            "externalId": "external_2",
+            "photos": "photo_2"
+          },
+          "distance": 15000,
+          "duration": 30,
+          "travelMode": "TRAIN"
+        },
+        {
+          "id": 2,
+          "startPoint": {
+            "id": 2,
+            "name": "dummy_point_2",
+            "formattedAddress": "address_second",
+            "url": "url_2",
+            "lat": 2,
+            "lng": 2,
+            "externalId": "external_2",
+            "photos": "photo_2"
+          },
+          "endPoint": {
+            "id": 3,
+            "name": "dummy_point_3",
+            "formattedAddress": "address_third",
+            "url": "url_3",
+            "lat": 1.5,
+            "lng": 1.5,
+            "externalId": "external_2",
+            "photos": "photo_3"
+          },
+          "distance": 115000,
+          "duration": 270,
+          "travelMode": "CAR"
+        }
+      ]
+    },
+    "createdAt": [
+      2023,
+      3,
+      16,
+      1,
+      1,
+      47,
+      104575000
+    ],
+    "updatedAt": [
+      2023,
+      3,
+      16,
+      1,
+      1,
+      47,
+      104575000
+    ]
+  }
+]

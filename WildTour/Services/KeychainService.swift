@@ -17,10 +17,10 @@ class KeychainService {
         if (status == errSecDuplicateItem){
             print("Dublicate.. Deleting old.")
             
-            deleteValue(key: key)
+            print(deleteValue(key: key))
             status = SecItemAdd(query as CFDictionary, nil) as OSStatus
         }
-            
+        
         guard status == errSecSuccess else {
             print("Error status is \(status)")
             return status

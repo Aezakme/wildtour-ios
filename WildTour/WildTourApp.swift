@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct WildTourApp: App {
     
-    @StateObject private var modelData = ModelData()
+    @StateObject private var modelData = MockData()
+    
+    private var network = UserData()
     
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(modelData)
+                .environmentObject(network)
         }
     }
 }

@@ -1,9 +1,9 @@
 import Foundation
 import Combine
 
-final class ModelData: ObservableObject {
+final class MockData: ObservableObject {
     @Published var profile: Profile = loadProfile()
-    @Published var trips: [Trip] = load("demo_trip.json")
+    @Published var trips: [Trip] = load("mock_trip_data.json")
     
     @Published var imageData = PandaCollection(sample: [Panda.defaultPanda])
     @Published var currentPanda = Panda.defaultPanda
@@ -35,9 +35,9 @@ final class ModelData: ObservableObject {
 
 func loadProfile() -> Profile {
     
-    var profile: Profile = load("profileData.json")
-    profile.username = LoginService.getUsername()
-    profile.password = LoginService.getPassword()
+    let profile: Profile = load("mock_profile_data.json")
+    //    profile.login = LoginService.getUsername()
+    
     return profile
 }
 

@@ -11,7 +11,9 @@ struct ProfileEditor: View {
     
     @Environment(\.editMode) private var editMode
     
-    @Binding var profile: Profile
+//    @EnvironmentObject var network: NetworkUserData
+    
+    var profile: Profile
     
     var body: some View {
         NavigationView {
@@ -20,12 +22,12 @@ struct ProfileEditor: View {
                 HStack {
                     Text("Username").bold()
                     Divider()
-                    TextField("Username", text: .constant(profile.username ?? "text"))
+                    TextField("Username", text: .constant(profile.login ?? "text"))
                 }
                 
-                Toggle(isOn: $profile.prefersNotifications) {
-                    Text("Enable Notifications").bold()
-                }
+//                Toggle(isOn: $profile.prefersNotifications) {
+//                    Text("Enable Notifications").bold()
+//                }
                 
                 Button(action: {
                     LoginService.logout()
@@ -47,7 +49,7 @@ struct ProfileEditor: View {
     struct ProfileEditor_Previews: PreviewProvider {
         
         static var previews: some View {
-            ProfileEditor(profile: .constant(ModelData().profile))
+            ProfileEditor(profile: MockData().profile)
         }
     }
 }

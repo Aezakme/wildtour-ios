@@ -14,8 +14,8 @@ struct TripStep: View {
     var body: some View {
         HStack {
             VStack {
-                Text(step.distance.humanReadable)
-                Text(step.duration.humanReadable)
+                Text("\(step.distance) meters")
+                Text("\(step.duration) min")
                 Text(step.travelMode)
             }
             Text("====>")
@@ -35,11 +35,10 @@ struct TripStep: View {
 }
 
 struct TripStep_Previews: PreviewProvider {
-    static var trips = ModelData().trips
+   static var trip = MockData().trips[0]
     static var previews: some View {
         Group {
-            TripStep(step: trips[0].route.steps[0])
-            TripStep(step: trips[1].route.steps[1])
+            TripStep(step: trip.route.steps[0])
         }
         .previewLayout(.fixed(width: 300, height: 140))
     }
