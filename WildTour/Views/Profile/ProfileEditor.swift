@@ -8,46 +8,46 @@
 import SwiftUI
 
 struct ProfileEditor: View {
-    
+
     @Environment(\.editMode) private var editMode
-    
+
 //    @EnvironmentObject var network: NetworkUserData
-    
+
     var profile: Profile
-    
+
     var body: some View {
         NavigationView {
             List {
-                
+
                 HStack {
                     Text("Username").bold()
                     Divider()
                     TextField("Username", text: .constant(profile.login ?? "text"))
                 }
-                
+
 //                Toggle(isOn: $profile.prefersNotifications) {
 //                    Text("Enable Notifications").bold()
 //                }
-                
+
                 Button(action: {
                     LoginService.logout()
                     editMode?.wrappedValue = .inactive  //Go to login page
                 }) {
                     Text("Logout")
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.red)
-                        .cornerRadius(8)
-                    
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.red)
+                            .cornerRadius(8)
+
                 }
-                .padding()
+                        .padding()
             }
         }
     }
-    
+
     struct ProfileEditor_Previews: PreviewProvider {
-        
+
         static var previews: some View {
             ProfileEditor(profile: MockData().profile)
         }

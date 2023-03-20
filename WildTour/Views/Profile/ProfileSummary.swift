@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct ProfileSummary: View {
-    
+
     //    @EnvironmentObject var modelData: MockData
-    
+
 //    @EnvironmentObject var network: NetworkUserData
-    
-    
+
+
     var profile: Profile
 //    var imageMetadata: Panda
-    
-    
-    
+
+
     var body: some View {
-        
+
         //Just internet check
         //        AsyncImage(url: imageMetadata.imageUrl) { phase in
         //                    if let image = phase.image {
@@ -45,32 +44,32 @@ struct ProfileSummary: View {
         //        }.task {
         //            try? await modelData.fetchData()
         //        }
-        
+
         ScrollView {
-            
+
             VStack(alignment: .leading, spacing: 10) {
-                HStack(alignment: .center, spacing: 1.0){
+                HStack(alignment: .center, spacing: 1.0) {
                     CircleImage(image: profile.avatar)
-                    
+
                     VStack(alignment: .leading, spacing: 10) {
-                        
+
                         Text("Username: \(profile.login!)").bold().font(.title)
-                        
+
                         Text("Email: \(profile.fullName!)")
-                        
+
                         Text("Pass: \(profile.email!)")
-                        
-                        
+
+
                     }
                 }
-                .padding(.vertical, 50.0)
-                
+                        .padding(.vertical, 50.0)
+
                 Divider()
-                
+
                 VStack(alignment: .leading) {
                     Text("Bio")
-                        .font(.headline)
-                    
+                            .font(.headline)
+
                     Text(profile.bio!)
                 }
             }

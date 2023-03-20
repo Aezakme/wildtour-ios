@@ -13,7 +13,7 @@ struct Point: Hashable, Codable, Identifiable {
     var formattedAddress: String
     var url: String
     var lat: Double
-    var lng : Double
-    var externalId : String
+    var lng: Double
+    var externalId: String
     var photos: String
 }

@@ -12,7 +12,7 @@ struct Step: Hashable, Codable, Identifiable {
     var id: Int? = 0
     var startPoint: Point
     var endPoint: Point
-    var distance : Int
-    var duration : Int
+    var distance: Int
+    var duration: Int
     var travelMode: String
 }

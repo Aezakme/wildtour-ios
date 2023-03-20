@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct TripStep: View {
-    
+
     var step: Step
-    
+
     var body: some View {
         HStack {
             VStack {
@@ -22,11 +22,11 @@ struct TripStep: View {
             VStack {
                 Text(step.startPoint.name)
                 Text(step.startPoint.formattedAddress)
-                
-                
+
+
                 Text("|/")
-                
-                
+
+
                 Text(step.endPoint.name)
                 Text(step.endPoint.formattedAddress)
             }
@@ -35,11 +35,11 @@ struct TripStep: View {
 }
 
 struct TripStep_Previews: PreviewProvider {
-   static var trip = MockData().trips[0]
+    static var trip = MockData().trips[0]
     static var previews: some View {
         Group {
             TripStep(step: trip.route.steps[0])
         }
-        .previewLayout(.fixed(width: 300, height: 140))
+                .previewLayout(.fixed(width: 300, height: 140))
     }
 }
