@@ -11,16 +11,28 @@ struct ProfileHost: View {
 
     @Environment(\.editMode) var editMode
 
+    @Environment(\.showingProfile) var showingProfile
+
+    @Environment(\.isLogoutSuccessful) var isLogoutSuccessful
+
     var profile: Profile
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
                 if editMode?.wrappedValue == .active {
-                    Button("Cancel", role: .cancel) {
-                        editMode?.animation().wrappedValue = .inactive
+//                    Button("Cancel", role: .cancel) {
+//                        editMode?.animation().wrappedValue = .inactive
+//                    }
+
+                    Button("Logout", role: .destructive) {
+                        LoginService.logout()
+
+                        isLogoutSuccessful.wrappedValue = true
+                        showingProfile.wrappedValue = false
                     }
                 }
+
 
                 Spacer()
                 EditButton()

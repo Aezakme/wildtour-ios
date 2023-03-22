@@ -24,24 +24,25 @@ class LoginService {
     }
 
     static func getUsername() -> String? {
-        return KeychainService.getByKey(key: "username")
+        KeychainService.getByKey(key: "username")
     }
 
     static func getPassword() -> String? {
-        return KeychainService.getByKey(key: "password")
+        KeychainService.getByKey(key: "password")
     }
 
-    static func logout() {
+    static func logout() -> OSStatus {
         let status = KeychainService.deleteValue(key: "username")
         if (status != errSecSuccess) {
             print("problem with logout \(status)")
         }
+        return status
 
         //if (status != errSecSuccess) {print("problem with logout 2 \(status)")} //WTF???
     }
 
-    static func isLoggined() -> Bool {
-        return KeychainService.getByKey(key: "username") != nil && KeychainService.getByKey(key: "username") != ""
+    static func isLogged() -> Bool {
+        KeychainService.getByKey(key: "username") != nil && KeychainService.getByKey(key: "username") != ""
                 && KeychainService.getByKey(key: "password") != nil && KeychainService.getByKey(key: "password") != ""
     }
 

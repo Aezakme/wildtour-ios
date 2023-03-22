@@ -5,10 +5,6 @@ final class MockData: ObservableObject {
     @Published var profile: Profile = loadProfile()
     @Published var trips: [Trip] = load("mock_trip_data.json")
 
-    @Published var imageData = PandaCollection(sample: [Panda.defaultPanda])
-    @Published var currentPanda = Panda.defaultPanda
-
-
     let urlString = "http://playgrounds-cdn.apple.com/assets/pandaData.json"
 
     enum FetchError: Error {
@@ -29,7 +25,6 @@ final class MockData: ObservableObject {
         }
 
         Task { @MainActor in
-            imageData = try JSONDecoder().decode(PandaCollection.self, from: data)
             print("horay")
         }
     }

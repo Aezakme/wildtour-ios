@@ -9,12 +9,13 @@ import Foundation
 
 class UserData: ObservableObject {
 
-
-    @Published var trips: [Trip] = []
+    @Published var userTrips: [Trip] = []
     @Published var profile: Profile? = nil
 
+    let baseUrl = "http://localhost:8094"
+
     func getTrips() {
-        let url = URL(string: "http://localhost:8094/user/1/trips")!
+        let url = URL(string: baseUrl + "/user/1/trips")!
 
         let urlRequest = URLRequest(url: url)
 
@@ -35,7 +36,7 @@ class UserData: ObservableObject {
                 DispatchQueue.main.async {
                     do {
                         let decodedTrips = try JSONDecoder().decode([Trip].self, from: data)
-                        self.trips = decodedTrips
+                        self.userTrips = decodedTrips
                     } catch let error {
                         print("Error decoding: ", error)
                     }
@@ -46,8 +47,9 @@ class UserData: ObservableObject {
         dataTask.resume()
     }
 
+
     func getUser() {
-        let url = URL(string: "http://localhost:8094/user/1")!
+        let url = URL(string: baseUrl + "/user/1")!
 
         let urlRequest = URLRequest(url: url)
 

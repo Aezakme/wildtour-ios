@@ -12,12 +12,19 @@ struct WildTourApp: App {
 
     @StateObject private var modelData = MockData()
 
-    private var network = UserData()
+    @StateObject private var userData = UserData()
 
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(modelData)
-                    .environmentObject(network)
+            ContentView()
+                    //                    .environmentObject(modelData)
+                    .environmentObject(userData)
+                    //Just for fun
+                    .onOpenURL { url in
+                        print(url.scheme)
+                        print(url.host)
+                        print(url.lastPathComponent)
+                    }
         }
     }
 }

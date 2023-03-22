@@ -10,12 +10,13 @@ import MapKit
 
 struct MapView: View {
 
-    var coordinate: CLLocationCoordinate2D
+    var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.12)
 //    @State private var region = MKCoordinateRegion()
 
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.5, longitude: -0.12), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.5, longitude: -0.12),
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
 
-    let locations = [
+    var locations = [
         Location(name: "Buckingham Palace", coordinate: CLLocationCoordinate2D(latitude: 51.501, longitude: -0.141)),
         Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 51.508, longitude: -0.076))
     ]
@@ -24,19 +25,19 @@ struct MapView: View {
         Map(coordinateRegion: $region, annotationItems: locations) { location in
             MapMarker(coordinate: location.coordinate)
         }
-//        .onAppear {
-//            setRegion(coordinate)
-//        }
 
+//                .onAppear {
+//                    setRegion(coordinate)
+//                }
 
     }
 
-//    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
-//        region = MKCoordinateRegion(
-//            center: coordinate,
-//            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-//        )
-//    }
+    public func setRegion(coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+                center: coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    }
 }
 
 struct MapView_Previews: PreviewProvider {

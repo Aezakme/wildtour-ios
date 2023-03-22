@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        if LoginService.isLoggined() {
+
+        if LoginService.isLogged() {
             TripList()
         } else {
             LoginView()
         }
-
     }
 }
 

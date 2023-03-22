@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99362A152958C0E800792041 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99362A142958C0E800792041 /* Profile.swift */; };
-		99362A172958C10700792041 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99362A162958C10700792041 /* ProfileHost.swift */; };
+		77ADF505081B80F94D645E05 /* EnvironmentValuesExstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADF9DD83A3B775562C59E2 /* EnvironmentValuesExstension.swift */; };
+		77ADF5EFECE162F03B695FF4 /* DateRangePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADF16541E7C5BF6EBC0400 /* DateRangePicker.swift */; };
+		77ADF753FB04645A1542D55E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADFBFA4751DBFFA1F2B063 /* Button.swift */; };
+		77ADF9D04208E10C6654418E /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADF7DCDD8BF20E6D05634D /* ProfileHost.swift */; };
+		77ADFB2753AE71A91C6D4400 /* CreateNewTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADF92BB33085C8E7BC8B0E /* CreateNewTrip.swift */; };
+		77ADFD263ADAA271E62ADC26 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADFFB2E0DBA167B6922D2D /* Profile.swift */; };
 		99362A1A2958C12000792041 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99362A192958C12000792041 /* ProfileSummary.swift */; };
 		99368D8B2997FFF20005A169 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D8A2997FFF20005A169 /* Trip.swift */; };
 		99368D8C2998022F0005A169 /* mock_trip_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 99368D892997FFCA0005A169 /* mock_trip_data.json */; };
@@ -17,7 +21,6 @@
 		99368D93299803930005A169 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D92299803930005A169 /* Duration.swift */; };
 		99368D9529980D300005A169 /* TripStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D9429980D300005A169 /* TripStep.swift */; };
 		99368D9729980EE40005A169 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D9629980EE40005A169 /* Step.swift */; };
-		99368D9A29A421BB0005A169 /* Panda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99368D9929A421BB0005A169 /* Panda.swift */; };
 		993AB2672953BD9800885001 /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AB2662953BD9800885001 /* TripList.swift */; };
 		993AB2692953BE1300885001 /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AB2682953BE1300885001 /* TripDetail.swift */; };
 		993AB26B2953C3DC00885001 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AB26A2953C3DC00885001 /* FavoriteButton.swift */; };
@@ -59,8 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		99362A142958C0E800792041 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		99362A162958C10700792041 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		77ADF16541E7C5BF6EBC0400 /* DateRangePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangePicker.swift; sourceTree = "<group>"; };
+		77ADF7DCDD8BF20E6D05634D /* ProfileHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		77ADF92BB33085C8E7BC8B0E /* CreateNewTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewTrip.swift; sourceTree = "<group>"; };
+		77ADF9DD83A3B775562C59E2 /* EnvironmentValuesExstension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentValuesExstension.swift; sourceTree = "<group>"; };
+		77ADFBFA4751DBFFA1F2B063 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		77ADFFB2E0DBA167B6922D2D /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		99362A192958C12000792041 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		99368D892997FFCA0005A169 /* mock_trip_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_trip_data.json; sourceTree = "<group>"; };
 		99368D8A2997FFF20005A169 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -69,14 +76,12 @@
 		99368D92299803930005A169 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		99368D9429980D300005A169 /* TripStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStep.swift; sourceTree = "<group>"; };
 		99368D9629980EE40005A169 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		99368D9929A421BB0005A169 /* Panda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panda.swift; sourceTree = "<group>"; };
 		993AB2662953BD9800885001 /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
 		993AB2682953BE1300885001 /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		993AB26A2953C3DC00885001 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		9949CAC329C53E4500491553 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		9949CAC729C5F2EB00491553 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		9949CAC929C5F84E00491553 /* RoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadView.swift; sourceTree = "<group>"; };
-		9949CACB29C6053B00491553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9988B7B42958E7C00003E39B /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		9988B7B62958F5FC0003E39B /* mock_profile_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_profile_data.json; sourceTree = "<group>"; };
 		999940E3295365B5001B5028 /* WildTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,12 +127,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77ADFBAE2C7050A6F93B7882 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				77ADF92BB33085C8E7BC8B0E /* CreateNewTrip.swift */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
 		99362A182958C11200792041 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				99362A162958C10700792041 /* ProfileHost.swift */,
 				99362A192958C12000792041 /* ProfileSummary.swift */,
 				9988B7B42958E7C00003E39B /* ProfileEditor.swift */,
+				77ADF7DCDD8BF20E6D05634D /* ProfileHost.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -140,6 +153,7 @@
 				99368D90299803830005A169 /* Distance.swift */,
 				99368D92299803930005A169 /* Duration.swift */,
 				99368D9629980EE40005A169 /* Step.swift */,
+				77ADFFB2E0DBA167B6922D2D /* Profile.swift */,
 			);
 			path = WT;
 			sourceTree = "<group>";
@@ -161,6 +175,9 @@
 				9999411229538971001B5028 /* CircleImage.swift */,
 				9999411429538AB6001B5028 /* MapView.swift */,
 				993AB26A2953C3DC00885001 /* FavoriteButton.swift */,
+				77ADF16541E7C5BF6EBC0400 /* DateRangePicker.swift */,
+				77ADFBFA4751DBFFA1F2B063 /* Button.swift */,
+				77ADF9DD83A3B775562C59E2 /* EnvironmentValuesExstension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -171,6 +188,7 @@
 				99368D98299816860005A169 /* Detail */,
 				999941232953BA35001B5028 /* TripRow.swift */,
 				993AB2662953BD9800885001 /* TripList.swift */,
+				77ADFBAE2C7050A6F93B7882 /* Creation */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -198,7 +216,6 @@
 		999940E5295365B5001B5028 /* WildTour */ = {
 			isa = PBXGroup;
 			children = (
-				9949CACB29C6053B00491553 /* Info.plist */,
 				99CC919829B3C98200392F35 /* Services */,
 				999941202953B9DA001B5028 /* Views */,
 				9999411F2953B9BE001B5028 /* Resources */,
@@ -231,8 +248,6 @@
 			children = (
 				99368D8D299802E70005A169 /* WT */,
 				9999411A2953B8B0001B5028 /* MockData.swift */,
-				99362A142958C0E800792041 /* Profile.swift */,
-				99368D9929A421BB0005A169 /* Panda.swift */,
 				9949CAC329C53E4500491553 /* UserData.swift */,
 			);
 			path = Model;
@@ -413,7 +428,6 @@
 				99362A1A2958C12000792041 /* ProfileSummary.swift in Sources */,
 				999940E7295365B5001B5028 /* WildTourApp.swift in Sources */,
 				99368D9529980D300005A169 /* TripStep.swift in Sources */,
-				99362A172958C10700792041 /* ProfileHost.swift in Sources */,
 				99CC919C29B3E16D00392F35 /* LoginService.swift in Sources */,
 				993AB26B2953C3DC00885001 /* FavoriteButton.swift in Sources */,
 				99AFA37529B3B0B200C8D5B5 /* LoginView.swift in Sources */,
@@ -431,8 +445,12 @@
 				99368D8F299802FC0005A169 /* Point.swift in Sources */,
 				9949CACA29C5F84E00491553 /* RoadView.swift in Sources */,
 				9988B7B52958E7C00003E39B /* ProfileEditor.swift in Sources */,
-				99362A152958C0E800792041 /* Profile.swift in Sources */,
-				99368D9A29A421BB0005A169 /* Panda.swift in Sources */,
+				77ADFD263ADAA271E62ADC26 /* Profile.swift in Sources */,
+				77ADFB2753AE71A91C6D4400 /* CreateNewTrip.swift in Sources */,
+				77ADF5EFECE162F03B695FF4 /* DateRangePicker.swift in Sources */,
+				77ADF753FB04645A1542D55E /* Button.swift in Sources */,
+				77ADF9D04208E10C6654418E /* ProfileHost.swift in Sources */,
+				77ADF505081B80F94D645E05 /* EnvironmentValuesExstension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

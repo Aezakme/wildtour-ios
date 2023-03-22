@@ -9,67 +9,46 @@ import SwiftUI
 
 struct ProfileSummary: View {
 
-    //    @EnvironmentObject var modelData: MockData
-
-//    @EnvironmentObject var network: NetworkUserData
-
-
     var profile: Profile
-//    var imageMetadata: Panda
-
 
     var body: some View {
 
-        //Just internet check
-        //        AsyncImage(url: imageMetadata.imageUrl) { phase in
-        //                    if let image = phase.image {
-        //                        image
-        //                            .resizable()
-        //                            .scaledToFit()
-        //                            .cornerRadius(15)
-        //                            .shadow(radius: 5)
-        //                            .accessibility(hidden: false)
-        //                            .accessibilityLabel(Text(imageMetadata.description))
-        //                    }  else if phase.error != nil  {
-        //                        VStack {
-        //                            Text("The pandas were all busy.")
-        //                                .font(.title2)
-        //                            Text("Please try again.")
-        //                                .font(.title3)
-        //                        }
-        //
-        //                    } else {
-        //                        ProgressView()
-        //                    }
-        //        }.task {
-        //            try? await modelData.fetchData()
-        //        }
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .center, spacing: 20.0) {
+                CircleImage(image: profile.avatar)
 
-        ScrollView {
+                VStack(alignment: .leading, spacing: 10) {
 
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(alignment: .center, spacing: 1.0) {
-                    CircleImage(image: profile.avatar)
-
-                    VStack(alignment: .leading, spacing: 10) {
-
-                        Text("Username: \(profile.login!)").bold().font(.title)
-
-                        Text("Email: \(profile.fullName!)")
-
-                        Text("Pass: \(profile.email!)")
-
-
+                    Text("\(profile.login!)").bold().font(.title2)
+                    HStack {
+                        Text("Full Name: ").bold().font(.system(size: 14))
+                        Text("\(profile.fullName!)").font(.system(size: 14))
+                    }
+                    HStack {
+                        Text("Email: ").bold().font(.system(size: 14))
+                        Text("\(profile.email!)").font(.system(size: 14))
                     }
                 }
-                        .padding(.vertical, 50.0)
+            }
+                    .padding(.vertical, 25)
 
-                Divider()
+            HStack {
+                Text("Sex: ").bold()
+                Text("\(profile.sex!)")
+            }
 
-                VStack(alignment: .leading) {
-                    Text("Bio")
-                            .font(.headline)
+            HStack {
+                Text("Country code: ").bold()
+                Text("\(profile.countryCode!)")
+            }
 
+            Divider()
+
+            VStack(alignment: .leading) {
+                Text("Bio")
+                        .font(.headline)
+                        .padding(.vertical, 10)
+                ScrollView {
                     Text(profile.bio!)
                 }
             }
