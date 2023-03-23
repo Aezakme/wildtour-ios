@@ -9,22 +9,22 @@ import SwiftUI
 
 @main
 struct WildTourApp: App {
-
+    
     @StateObject private var modelData = MockData()
-
+    
     @StateObject private var userData = UserData()
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                    //                    .environmentObject(modelData)
-                    .environmentObject(userData)
-                    //Just for fun
-                    .onOpenURL { url in
-                        print(url.scheme)
-                        print(url.host)
-                        print(url.lastPathComponent)
-                    }
+            //                    .environmentObject(modelData)
+                .environmentObject(userData)
+            //Just for fun
+                .onOpenURL { url in
+                    print(url.scheme ?? "none")
+                    print(url.host  ?? "none")
+//                    print(url.lastPathComponent ?? "none")
+                }
         }
     }
 }

@@ -11,6 +11,8 @@ class UserData: ObservableObject {
 
     @Published var userTrips: [Trip] = []
     @Published var profile: Profile? = nil
+    
+    var mockData : MockData = MockData()
 
     let baseUrl = "http://localhost:8094"
 
@@ -22,6 +24,7 @@ class UserData: ObservableObject {
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
                 print("Request error: ", error)
+                self.userTrips = self.mockData.trips
                 return
             }
 
@@ -56,6 +59,7 @@ class UserData: ObservableObject {
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
                 print("Request error: ", error)
+                self.profile = self.mockData.profile
                 return
             }
 

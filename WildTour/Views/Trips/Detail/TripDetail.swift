@@ -43,7 +43,7 @@ struct TripDetail: View {
                     RoadView(step: step)
                 }
 
-                var step = trip.route.steps.last!
+                let step = trip.route.steps.last!
                 PointView(point: step.endPoint)
             }
                     .padding()
