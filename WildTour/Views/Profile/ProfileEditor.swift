@@ -11,16 +11,18 @@ struct ProfileEditor: View {
 
     @Environment(\.editMode) private var editMode
 
-    @State private var isLogoutSuccessful: Bool = false
+    @Environment(\.isLogoutSuccessful) private var isLogoutSuccessful
+
+    @Environment(\.showProfileEditor) private var showProfileEditor
 
     @State private var fakeToggle: Bool = true
 
     var profile: Profile
 
+    var host: String
+
     var body: some View {
-
         List {
-
             HStack {
                 Text("Username").bold()
                 Divider()
@@ -37,6 +39,19 @@ struct ProfileEditor: View {
                 Text("Enable Notifications").bold()
             }
 
+            HStack {
+                Text("Host ").bold()
+                Divider()
+                TextField("Email", text: .constant(host ?? "text"))
+            }
+
+            Button("Logout", role: .destructive) {
+                LoginService.logout()
+
+                isLogoutSuccessful.wrappedValue = true
+                showProfileEditor.wrappedValue = false
+            }
+
         }
     }
 
@@ -45,6 +60,6 @@ struct ProfileEditor: View {
 struct ProfileEditor_Previews: PreviewProvider {
 
     static var previews: some View {
-        ProfileEditor(profile: MockData().profile)
+        ProfileEditor(profile: MockData().profile, host: "local")
     }
 }

@@ -9,11 +9,11 @@ struct TripRow: View {
             trip.image
                     .resizable()
                     .frame(width: 50, height: 50)
-            Text(trip.name)
+            Text(trip.name!)
 
             Spacer()
 
-            if trip.isFavorite {
+            if trip.isFavorite ?? false {
                 Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
             }

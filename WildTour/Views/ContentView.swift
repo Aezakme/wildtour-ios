@@ -12,7 +12,29 @@ struct ContentView: View {
     var body: some View {
 
         if LoginService.isLogged() {
-            TripList()
+            TabView {
+                TripListView()
+                        .tabItem {
+                            Label("Trips", systemImage: "list.bullet")
+                        }
+
+                Text("TBD")
+                        .tabItem {
+                            Label("Search", systemImage: "magnifyingglass")
+                        }
+
+                CreateNewTripSelectionView()
+                        .tabItem {
+                            Label("Create", systemImage: "plus.circle")
+                        }
+
+                ProfileView()
+                        .tabItem {
+                            Label("Profile", systemImage: "person.crop.circle")
+                        }
+            }
+
+                    .accentColor(.blue)
         } else {
             LoginView()
         }

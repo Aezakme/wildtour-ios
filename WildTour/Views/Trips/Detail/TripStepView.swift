@@ -1,5 +1,5 @@
 //
-//  TripStep.swift
+//  TripStepView.swift
 //  WildTour
 //
 //  Created by Kirill Polyakov on 11.02.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TripStep: View {
+struct TripStepView: View {
 
     var step: Step
 
@@ -38,7 +38,7 @@ struct TripStep_Previews: PreviewProvider {
     static var trip = MockData().trips[0]
     static var previews: some View {
         Group {
-            TripStep(step: trip.route.steps[0])
+            TripStepView(step: trip.route!.steps[0])
         }
                 .previewLayout(.fixed(width: 300, height: 140))
     }

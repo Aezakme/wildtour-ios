@@ -5,7 +5,7 @@
 import SwiftUI
 import MapKit
 
-struct CreateNewTrip: View {
+struct CreateNewTripAIView: View {
 
     @State private var city: String = ""
     @State private var fromDate: Date = Date()
@@ -91,7 +91,7 @@ class SearchCompleterDelegate: NSObject, MKLocalSearchCompleterDelegate {
 
 struct CreateNewTrip_Previews: PreviewProvider {
     static var previews: some View {
-        CreateNewTrip()
+        CreateNewTripAIView()
     }
 }
 
