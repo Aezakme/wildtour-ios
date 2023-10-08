@@ -11,15 +11,13 @@ class UserData: ObservableObject {
 
     @Published var userTrips: [Trip] = []
     @Published var profile: Profile? = nil
-    
-    var mockData : MockData = MockData()
+
+    var mockData: MockData = MockData()
 
     let baseUrl = "http://localhost:8094"
 
     func getTrips() {
-        let url = URL(string: baseUrl + "/user/1/trips")!
-
-        let urlRequest = URLRequest(url: url)
+        let urlRequest = createGetRequest(path: "/user/1/trips")
 
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
@@ -49,7 +47,6 @@ class UserData: ObservableObject {
 
         dataTask.resume()
     }
-
 
     func getUser() {
         let url = URL(string: baseUrl + "/user/1")!
@@ -83,6 +80,109 @@ class UserData: ObservableObject {
         }
 
         dataTask.resume()
+    }
+
+    func createNewTrip(tripToCreate: TripToCreate) {
+        print("post new trip")
+
+        var urlRequest = createUrlPostRequest(path: "/user/1/trip")
+
+        if let data = try? JSONEncoder().encode(tripToCreate) {
+            urlRequest.httpBody = data
+            print(String(data: data, encoding: .utf8)!)
+        }
+
+
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                print("Request error: ", error)
+                self.profile = self.mockData.profile
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+
+            if response.statusCode == 200 {
+                guard let data = data else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    do {
+                        print(String(data: data, encoding: .utf8)!)
+//                        let decodedUser = try JSONDecoder().decode(Profile.self, from: data)
+//                        self.profile = decodedUser
+                    } catch let error {
+                        print("Error decoding: ", error)
+                    }
+                }
+            } else {
+                print("\(response)")
+            }
+        }
+
+        dataTask.resume()
+    }
+
+    func addNewPoint(stepToCreate: StepToCreate) {
+        print("post add point")
+        var urlRequest = createUrlPostRequest(path: "/user/1/trip")
+
+        if let data = try? JSONEncoder().encode(stepToCreate) {
+            urlRequest.httpBody = data
+            print(String(data: data, encoding: .utf8)!)
+        }
+
+
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                print("Request error: ", error)
+                self.profile = self.mockData.profile
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+
+            if response.statusCode == 200 {
+                guard let data = data else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    do {
+                        print(String(data: data, encoding: .utf8)!)
+//                        let decodedUser = try JSONDecoder().decode(Profile.self, from: data)
+//                        self.profile = decodedUser
+                    } catch let error {
+                        print("Error decoding: ", error)
+                    }
+                }
+            } else {
+                print("\(response)")
+            }
+        }
+
+        dataTask.resume()
+    }
+
+    private func createUrlPostRequest(path: String) -> URLRequest {
+        let url = URL(string: baseUrl + path)!
+
+        var urlRequest = URLRequest(url: url)
+
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
+        urlRequest.httpMethod = "POST"
+        return urlRequest
+    }
+
+    private func createGetRequest(path: String) -> URLRequest {
+        let url = URL(string: baseUrl + path)!
+
+        let urlRequest = URLRequest(url: url)
+        return urlRequest
     }
 
 }

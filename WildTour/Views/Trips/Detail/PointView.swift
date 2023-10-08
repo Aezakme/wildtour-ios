@@ -27,8 +27,6 @@ struct PointView: View {
                     .padding(.leading, 20)
 
             Spacer()
-
-
                     .padding(.trailing, 25)
         }
     }
@@ -40,7 +38,7 @@ struct PointView_Previews: PreviewProvider {
 
 
     static var previews: some View {
-        let point = modelData.trips[0].route.steps[0].startPoint
+        let point = modelData.trips[0].route!.steps[0].startPoint
 
         PointView(point: point)
     }

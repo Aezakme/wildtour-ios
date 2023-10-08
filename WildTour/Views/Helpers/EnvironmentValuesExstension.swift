@@ -16,12 +16,12 @@ extension EnvironmentValues {
         }
     }
 
-    var showingProfile: Binding<Bool> {
+    var showProfileEditor: Binding<Bool> {
         get {
-            self[showingProfileValue.self]
+            self[showProfileEditorValue.self]
         }
         set {
-            self[showingProfileValue.self] = newValue
+            self[showProfileEditorValue.self] = newValue
         }
     }
 }
@@ -31,6 +31,6 @@ struct isLogoutSuccessfulValue: EnvironmentKey {
 }
 
 
-struct showingProfileValue: EnvironmentKey {
+struct showProfileEditorValue: EnvironmentKey {
     static let defaultValue: Binding<Bool> = .constant(false)
 }

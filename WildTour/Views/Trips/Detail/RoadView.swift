@@ -35,7 +35,7 @@ struct RoadView: View {
 
             VStack(alignment: .trailing, spacing: 5) {
                 NavigationLink {
-                    TripStep(step: step)
+                    TripStepView(step: step)
                 } label: {
                     Image(systemName: "chevron.right")
                             .padding(.all, 1.0)
@@ -53,6 +53,6 @@ struct RoadView_Previews: PreviewProvider {
     static let modelData = MockData()
 
     static var previews: some View {
-        RoadView(step: modelData.trips[0].route.steps[0])
+        RoadView(step: modelData.trips[0].route!.steps[0])
     }
 }
